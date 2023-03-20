@@ -1,0 +1,69 @@
+*{
+    margin:0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.box .img-col{
+    display: flex;
+    flex-direction: column;
+    width: 28.5%;
+}
+
+.box .img-col img{
+    width: 100%;
+    padding-bottom: 20px;
+    animation: fadeInBottom 2s; 
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+image{
+    position: relative;
+    animation:  fadeIn 1s;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+}
+
+.img-col:hover .image-overlay{
+    opacity: 0.75;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.676);
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to { opacity: 1 }
+}

@@ -1,0 +1,41 @@
+<div class="login-jumbo d-flex flex-row" style = "height: 75vh;">
+    <div class="jumbotron" style = "width: 60%; height: 75vh;">
+    </div>
+    <div class="login-page" style = "width: 40%; height: 75vh;">
+        <form class = "d-flex flex-column align-items-center m-5">
+            <div class="form-outline mb-4" style = "width: 75%;">
+                <label class="form-label" ng-model = "loginName">Email or username <span style = "color: red">*</span></label>
+                <input type="email" id="loginName" class="form-control" />
+            </div> 
+            <div class="form-outline mb-4" style = "width: 75%;">
+                <label class="form-label" ng-model = "loginPassword">Password <span style = "color: red">*</span></label>
+                <input type="password" id="loginPassword" class="form-control" />
+            </div>
+            <div class="checkRemforgot d-flex justify-content-center" style="width: 75%">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                    <label class="form-check-label" for="loginCheck"> Remember me </label>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <a href="#!" routerLinkActive = "active" router routerLink="/register">Forgot password?</a>
+                </div>
+            </div>
+            <div class="text-center m-4">
+                <p>Not a member? <a href="#!" routerLinkActive = "active" router routerLink="/register">Register</a></p>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class = "btn m-2" style = "height: 40px; width: 75%; border-radius: 100px; color: black; background-color: none; border: 1px solid black;" 
+            (click) = 'onSignIn(loginName, loginPassword)'>Sign in</button>
+        </form>
+        <div class="button-row d-flex justify-content-center">
+            <button routerLinkActive = "active" router routerLink="/login"
+                    class = "btn m-2" style = "height: 40px; width: 32%; border-radius: 100px; color: black; background-color: none; border: 1px solid black;">
+                Login
+            </button>
+            <button routerLinkActive = "active" router routerLink="/register"
+            class = "btn m-2" style = "height: 40px; width: 32%; border-radius: 100px; color: black; background-color: none; border: 1px solid black;">
+                Register
+            </button>
+        </div>
+    </div>
+</div>

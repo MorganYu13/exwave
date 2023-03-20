@@ -1,0 +1,49 @@
+<div class="jumbotron">
+    <div class="jumbotext">
+        <p>For the</p>
+        <i class="fa fa-sharp fa-solid fa-heart fa-5x" [style.color]="categories[current_category].icon_color"></i>
+        <p>of photography.</p>
+    </div>
+</div>
+<div class="button-row">
+    <button *ngFor="let cat of category_names;" (click)="changeThemes(cat)" [style.background-color]="(categories[cat].active)?categories[cat].background_color:'#EDEDED'" [style.color]="(categories[cat].active) ? 'white' : '#4D4545'">
+        <p>{{cat}}</p>
+    </button>
+</div>
+
+<div class="container-fluid row image-row">
+    <div class="col p-2" *ngFor="let image of categories[current_category].images; let i = index">
+        <div class = "image" [style.background-image]="urlForCSS(image)">
+            <div class = "image-overlay">
+                <table class = "table table-dark table-striped m-3">
+                    <tr>
+                        <th>
+                            Shot using:
+                        </th>
+                        <td>
+                            {{categories[current_category].images_shot_using[i]}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Shot when:
+                        </th>
+                        <td>
+                            {{categories[current_category].images_date[i]}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Shot where:
+                        </th>
+                        <td>
+                            {{categories[current_category].images_location[i]}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

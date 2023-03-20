@@ -1,0 +1,56 @@
+.nav-bar{
+    padding: 100px 97px 71px 97px; 
+
+    display: flex;
+    justify-content: space-between;   /* for horizontal spacing in flex */
+    align-items: center; /* for vertical spacing */
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #4D4545;
+    font-size: 35px; 
+    font-weight: 300;
+    font-family: 'IBM Plex Mono', monospace;
+    
+    border: 1px solid #4D4545;
+    border-radius: 100px;
+
+    width: 230px; 
+    height: 70px; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo p {
+    margin: 0px;
+    padding: 0px; 
+}
+
+        
+.links a {
+    padding: 0px 40px; 
+    text-decoration: none;
+
+    display: flex;
+    float: right !important;
+
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #4D4545;
+}
+
+.links a:hover {
+    display: inline-block;
+    position: relative;
+    color: #5eddf9;
+    transition: all 0.3s ease-in-out;
+}  
+
